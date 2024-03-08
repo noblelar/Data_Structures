@@ -58,12 +58,19 @@ namespace DataStructuresAndAlgorithms
 
 
             // TODO: Use the Find function to search through items
+            string item = "";
+            item = strList.Find(match: x => x.StartsWith("L"));
+            Console.WriteLine(item);
 
 
             // TODO: The FindAll function can find multiple items
-
+            List<string> itemList = strList.FindAll(match: x => x.StartsWith("L"));
+            PrintList(itemList);
 
             // TODO: Use TrueForAll to see if a given condition is true for all elements
+            bool result = strList.TrueForAll(x => x.StartsWith("L"));
+            Console.WriteLine($" Result: {result}");
+
 
             static void PrintList(List<string> theList)
             {
